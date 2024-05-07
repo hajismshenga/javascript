@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is Query Selector</title>
+        <!-- <script src="counter.js"></script>-->
+        <script>
+           /* function hello()
+            {
+                const header = document.querySelector('h1');
+                if(header.innerHTML==="Hello")
+                {
+                    header.innerHTML="Goodbye";
+                }
+                else 
+                {
+                    header.innerHTML="Hello";
+                }
+            }*/
+
+           /* let counter =0 ;
+            function count()
+            {
+                counter++;
+                document.querySelector('h1').innerHTML=counter;
+
+                if(counter%10==0)
+                alert(`Counter is ${counter}`);
+            }*/
+
+           /* addEventListener('DOMContentLoaded',function(){
+                //sample code here
+            });*/
+
+
+            /*document.addEventListener('DOMContentLoaded',function(){
+                document.querySelector('form').onsubmit=function()
+                {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}`);
+                };
+            });*/
+            document.addEventListener('DOMContentLoaded',function(){
+                document.querySelectorAll('button').forEach(function(button)
+                {
+                    button.onclick=function()
+                    {
+                        document.querySelector("#hello").style.color=button.dataset.color;
+                    }
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+
+        <h1 id="hello">Hello</h1>
+        <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="green">Green</button>
+
+      <!--  <form>
+        <input type="text" id="name" placeholder="Enter your name" autofocus>
+        <input type="submit">
+    </form>-->
+        <!--<h1>0</h1>
+        <button>Count</button>
+        <h1>0</h1>
+        <button onclick="count();">Click Here</button>-->
+        <!--<h1>Hello</h1>-->
+        <!--<button onclick="hello();">Click Here</button>-->
+
+    </body>
+</html>
